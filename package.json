@@ -1,0 +1,50 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run tsc",
+    "pretest": "npm run build",
+    "test": "npm run mocha dist/tests/ -b --recursive",
+    "tsc": "tsc",
+    "smid": "smid",
+    "mocha": "mocha"
+  },
+  "private": true,
+  "engines": {
+    "node": ">= 5.4.1"
+  },
+  "author": "d3trax",
+  "license": "MIT",
+  "dependencies": {
+    "inversify": "^2.0.0-rc.10",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.0-beta.11"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.0.31",
+    "@types/chai": "^3.4.31",
+    "@types/es6-shim": "0.0.30",
+    "@types/inversify": "^2.0.29",
+    "@types/mocha": "^2.2.30",
+    "@types/node": "^6.0.36",
+    "@types/react": "^0.14.31",
+    "@types/react-dom": "^0.14.15",
+    "@types/selenium-webdriver": "^2.44.27",
+    "@types/sinon": "^1.16.28",
+    "chai": "^3.5.0",
+    "es6-shim": "^0.35.1",
+    "inversify-dts": "^2.0.0",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
+    "smild": "^3.2.2",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.9.0-dev.20160409",
+    "webdriverio": "^4.2.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
