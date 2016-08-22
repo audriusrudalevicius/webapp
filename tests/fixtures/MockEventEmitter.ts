@@ -3,7 +3,7 @@ import {IEvent} from "../../src/EventSystem/IEvent";
 
 export class MockEventEmitter implements IEventEmitter {
 
-    private eventsStack:IEvent[] = [];
+    private eventsStack: IEvent[] = [];
 
     emitTo(clientId: string, event: IEvent): void {
         this.eventsStack.push(event);

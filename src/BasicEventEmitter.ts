@@ -1,5 +1,5 @@
 import IEventEmitter from "./EventSystem/IEventEmitter";
-import {injectable} from 'inversify';
+import {injectable} from "inversify";
 import {IEvent} from "./EventSystem/IEvent";
 
 @injectable()

@@ -1,10 +1,10 @@
-import {expect} from 'chai';
+import {expect} from "chai";
 import {MockEventEmitter} from "../../fixtures/MockEventEmitter";
 import {ServerEngine} from "../../../src/Server/ServerEngine";
 import {SystemStartedEvent} from "../../../src/Server/Events/SystemStartedEvent";
 
-var instance:ServerEngine;
-var mockEventEmitter = new MockEventEmitter();
+let instance: ServerEngine;
+let mockEventEmitter = new MockEventEmitter();
 
 describe("ServerEngine", () => {
 
@@ -13,11 +13,11 @@ describe("ServerEngine", () => {
         mockEventEmitter.reset();
     });
 
-    it('It must have correct instance', () => {
+    it("It must have correct instance", () => {
         expect(instance).to.be.instanceOf(ServerEngine);
     });
 
-    it('It must emit event on run', () => {
+    it("It must emit event on run", () => {
         instance.run();
         expect(mockEventEmitter.eventsEmitted.length).to.eq(1);
         expect(mockEventEmitter.eventsEmitted[0]).to.be.instanceOf(SystemStartedEvent);

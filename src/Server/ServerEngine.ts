@@ -1,4 +1,4 @@
-import {injectable, inject} from 'inversify';
+import {injectable, inject} from "inversify";
 import {BasicEventEmitter} from "../BasicEventEmitter";
 import IEventEmitter from "../EventSystem/IEventEmitter";
 import {Types} from "../EventSystem/EventClinetType";
@@ -7,7 +7,7 @@ import {SystemStartedEvent} from "./Events/SystemStartedEvent";
 @injectable()
 export class ServerEngine {
 
-    constructor(@inject(BasicEventEmitter) private eventEmitter:IEventEmitter) {
+    constructor(@inject(BasicEventEmitter) private eventEmitter: IEventEmitter) {
     }
 
     run() {

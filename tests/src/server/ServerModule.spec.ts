@@ -1,7 +1,7 @@
 import {ServerModule} from "../../../src/Server/ServerModule";
-import {expect} from 'chai';
+import {expect} from "chai";
 
-var instance:ServerModule;
+let instance: ServerModule;
 
 describe("ServerModule", () => {
 
@@ -9,7 +9,7 @@ describe("ServerModule", () => {
         instance = new ServerModule();
     });
 
-    it('It must have correct instance', () => {
+    it("It must have correct instance", () => {
         expect(instance).to.be.instanceOf(ServerModule);
-    })
+    });
 });
