@@ -8,12 +8,14 @@
     "prebuild": "npm run clean",
     "build": "npm run tsc",
     "lint": "npm run tslint \"src/**/*.ts\"",
-    "test": "npm run mocha -- --compilers ts:ts-node/register tests/ --recursive",
-    "ci": "npm run lint && npm run test",
+    "test": "npm run lint && npm run cover",
+    "test:mocha": "npm run mocha -- --compilers ts:ts-node/register tests/ --recursive",
+    "cover": "tsc && node ./node_modules/istanbul/lib/cli.js cover -x '**/logger.*' _mocha dist/tests/**/*.js && ./node_modules/.bin/remap-istanbul -i ./coverage/coverage.json -o ./coverage/html-report -t html",
     "tsc": "tsc",
     "smid": "smid",
     "mocha": "mocha",
-    "tslint": "tslint"
+    "tslint": "tslint",
+    "istanbul": "istanbul"
   },
   "private": true,
   "engines": {
@@ -42,13 +44,12 @@
     "@types/sinon": "^1.16.28",
     "chai": "^3.5.0",
     "es6-shim": "^0.35.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
+    "remap-istanbul": "^0.6.4",
     "sinon": "^1.17.5",
     "ts-node": "^1.3.0",
     "tslint": "^3.14.0-dev.1",
-    "typescript": "^1.9.0-dev.20160409",
-    "webdriverio": "^4.2.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.14.1"
+    "typescript": "^1.9.0-dev.20160409"
   }
 }
